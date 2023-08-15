@@ -1,17 +1,9 @@
 * {
-  /* box-sizing: border-box; */
-}
-
-:focus {
- /* TODO */
+  box-sizing: border-box; 
 }
 
 body {
-  /* TODO */
-}
-
-input {
- /* TODO */
+  background: linear-gradient(to left, #E05001, #f5ca1a);
 }
 
 .search-container {
