@@ -10,6 +10,14 @@ const fruit = ['Apple', 'Apricot', 'Avocado 🥑', 'Banana', 'Bilberry', 'Blackb
 
 // 	return results;
 // }
+
+// takes a string
+// first create an empty results arr
+// we then filter through the fruit arr
+	// convert each fruit into all lowercase
+	// then check if the str is included in the arr
+	// if included then push to the results arr
+// return the results arr
 const search = str => {
 	let results = [];
 	results.push(fruit.filter(val => val.toLowerCase().includes(str)))
@@ -22,15 +30,21 @@ const search = str => {
 // }
 // on key up see if key is included in array
 
-
-// search function will be nested inside
+// input.addEventListener('keyup', searchHandler);
+// on key up, run the searchHandler func
+// takes current input val, converts to lowercase
+// we create an empty results arr
+// if the input field has a length greater than 0
+	// run the search func on the input val
+	// then add the result to the results arr
+// then return showSuggestions func on the result.
 const searchHandler = e => {
 	const inputVal = e.target.value.toLowerCase();
 	let results = [];
-	if(inputVal.length > 0) { // if there is an inputVal
-		results = search(inputVal) // run the search function on the val and add the results arr
+	if(inputVal.length > 0) { 
+		results = search(inputVal);
 	}
-	showSuggestions(results, inputVal)
+	showSuggestions(results)
 }
 
 // function showSuggestions(results, inputVal) {
@@ -38,12 +52,22 @@ const searchHandler = e => {
 // 	// TODO
 // }
 
-// should create a list of each item that includes the str
-const showSuggestions = (results, inputVal) => {
+// takes the results arr
+// removes all html from suggestion box
+// if there are results 
+	// filter each result
+		// and for each result
+		// create an li element for the result
+	// then pass it a class
+// else
+	// results arr is set to empty arr
+	// remove suggestions box innerHTML
+	// remove class
+
+const showSuggestions = (results) => {
 	suggestions.innerHTML = "";
 	if (results.length > 0) {
 		results.filter(val => {
-		// for each val in the array, list each fruit 
 		val.forEach(fruit => {
 			return suggestions.innerHTML += `
 				<li>${fruit}</li>
@@ -61,6 +85,12 @@ const showSuggestions = (results, inputVal) => {
 // 	// TODO
 // }
 
+// suggestions.addEventListener('click', useSuggestion);
+// when click e happens
+// input changes to the targets value
+// focuses on the new input added
+// then suggestions box is cleared
+// suggestions class is removed
 const useSuggestion = e => {
 	input.value = e.target.innerText;
 	input.focus();

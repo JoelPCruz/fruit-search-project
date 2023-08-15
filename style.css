@@ -2,7 +2,8 @@
   box-sizing: border-box; 
 }
 
-body {
+body{
+  margin-top: 16em;
   background: linear-gradient(to left, #E05001, #f5ca1a);
 }
 
@@ -44,7 +45,7 @@ ul.has-suggestions {
 ul li {
   padding: 10px;
   cursor: pointer;
-  background: rgba(255,255,255,0.2);;
+  background: #F0AB3E;
 }
 ul li:hover {
   background-color: #e65c00;
@@ -52,4 +53,5 @@ ul li:hover {
 
 input {
   border-bottom: 2px solid #e65c00;
+  background: #F0AB3E;
 }
