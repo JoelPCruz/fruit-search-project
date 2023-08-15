@@ -50,13 +50,23 @@ const showSuggestions = (results, inputVal) => {
 			`;
 		});
 		});
+			suggestions.classList.add("has-suggestions");
+		} else {
+			results = [];
+			suggestions.innerHTML = "";
+			suggestions.classList.remove("has-suggestion");
 		}
 	}
 // function useSuggestion(e) {
 // 	// TODO
 // }
 
-const useSuggestion = e => 
+const useSuggestion = e => {
+	input.value = e.target.innerText;
+	input.focus();
+	suggestions.innerHTML = "";
+	suggestions.classList.remove("has-suggestion");
+}
 
 
 suggestions.addEventListener('click', useSuggestion);

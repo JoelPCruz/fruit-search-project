@@ -15,32 +15,49 @@ input {
 }
 
 .search-container {
- /* TODO */
+ width: 400px;
+ position: relative;
+ margin: 15px auto;
 }
 .search-container input,
 .search-container .suggestions {
-  /* TODO */
+  width: 100%;
+  background: #fff;
+  text-align: left;
 }
 .search-container input {
- /* TODO */
+  background: rgba(255, 255, 255, 0.2);
+  height: 60px;
+  padding: 0 10px;
 }
 .search-container .suggestions {
-   /* TODO */
+   position: absolute;
+   top: 60px;
 }
 
 ul {
-  /* TODO */
+  display: none;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0 1px 2px 0 rgb(0,0,0.2);
+  max-height: 200px;
+  overflow-y: auto;
 }
+
 ul.has-suggestions {
-  /* TODO */
+  display: block;
 }
+
 ul li {
-  /* TODO */
+  padding: 10px;
+  cursor: pointer;
+  background: rgba(255,255,255,0.2);;
 }
 ul li:hover {
-  /* TODO */
+  background-color: #e65c00;
 }
 
 input {
-   /* TODO */
+  border-bottom: 2px solid #e65c00;
 }
